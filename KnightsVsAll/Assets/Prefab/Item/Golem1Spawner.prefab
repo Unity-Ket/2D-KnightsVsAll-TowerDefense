@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minSpawnDelay: 5
-  maxSpawnDelay: 20
+  maxSpawnDelay: 10
   enemyType: {fileID: 673295692789296197, guid: 6e2e49a5224994a39a9d33f3958aa432,
     type: 3}
