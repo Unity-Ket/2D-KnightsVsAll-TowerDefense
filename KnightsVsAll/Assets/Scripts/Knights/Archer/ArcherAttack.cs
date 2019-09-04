@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ArcherAttack : MonoBehaviour
 {
-    [SerializeField] GameObject Projectile, weapon;
+    [SerializeField] GameObject Projectile;
+    [SerializeField] GameObject weapon;
 
     public void Shoot()
     {
