@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] int trophyCost = 100;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+}//Defender

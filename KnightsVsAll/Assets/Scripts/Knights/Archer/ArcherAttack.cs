@@ -10,6 +10,7 @@ public class ArcherAttack : MonoBehaviour
     public void Shoot()
     {
         Instantiate(Projectile, weapon.transform.position, transform.rotation);
+        Debug.Log("Projectile being fired: " + Projectile.name);
     }
 
 

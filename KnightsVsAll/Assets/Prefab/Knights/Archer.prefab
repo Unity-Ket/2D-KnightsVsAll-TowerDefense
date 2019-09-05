@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: Bow
   m_TagString: Untagged
-  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -40,8 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8808495637664239119}
   - component: {fileID: 1274018951134913071}
-  - component: {fileID: 7041203965484725756}
-  - component: {fileID: 93525974975290684}
   m_Layer: 0
   m_Name: Archer Body
   m_TagString: Untagged
@@ -112,40 +110,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &7041203965484725756
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7530361671469113016}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bef739b6d17e942028a923029c137ce1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &93525974975290684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7530361671469113016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d86b46ed8fee649e6afc3c311823f2f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Projectile: {fileID: 6913210961635494253, guid: 0afaf0d22da6b4f469f06ba52933e11b,
-    type: 3}
-  weapon: {fileID: 2975964575167719107}
 --- !u!1 &8715177582652574376
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,6 +119,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3150100261752656767}
+  - component: {fileID: 8673666324547128126}
+  - component: {fileID: 582997538}
+  - component: {fileID: 582997539}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Untagged
@@ -177,3 +144,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8673666324547128126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8715177582652574376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86b46ed8fee649e6afc3c311823f2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Projectile: {fileID: 6913210961635494253, guid: 0afaf0d22da6b4f469f06ba52933e11b,
+    type: 3}
+  weapon: {fileID: 2975964575167719107}
+--- !u!114 &582997538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8715177582652574376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a4e9e41375e43f7ac66dc299977a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trophyCost: 100
+--- !u!95 &582997539
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8715177582652574376}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bef739b6d17e942028a923029c137ce1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

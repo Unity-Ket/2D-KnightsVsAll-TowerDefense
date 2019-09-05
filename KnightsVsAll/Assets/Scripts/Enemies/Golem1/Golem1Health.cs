@@ -20,7 +20,7 @@ public class Golem1Health : MonoBehaviour
 
         if (health <= 0)
         {
-            Anim.SetTrigger("Death");
+            Anim.SetTrigger("Dead");
             Destroy(gameObject, .7f);
         }
     }
