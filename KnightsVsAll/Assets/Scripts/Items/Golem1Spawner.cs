@@ -21,7 +21,9 @@ public class Golem1Spawner : MonoBehaviour
 
     private void spawnEnemy()
     {
-        Instantiate(enemyType, transform.position, transform.rotation);
+        Golem1 newGolem1 = Instantiate(enemyType, transform.position, transform.rotation) as Golem1;
+
+        newGolem1.transform.parent = transform;
     }
 
     // Update is called once per frame

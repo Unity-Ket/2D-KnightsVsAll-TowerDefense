@@ -19,6 +19,11 @@ public class MagicPowerDisplay : MonoBehaviour
         magicPowerText.text = magicPower.ToString();
     }
 
+    public bool enoughmagic(int amount)
+    {
+        return magicPower >= amount;
+    }
+
     public void addMagic(int amount)
     {
         magicPower += amount;

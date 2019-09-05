@@ -8,7 +8,7 @@ public class DefenderSpawner : MonoBehaviour
 
     private void OnMouseDown()
     {
-        SpawnDefender(GetSquaredClicked());
+        testDefenderPlacement(GetSquaredClicked());
         //Debug.Log("Mouse was Clicked: ");
     }
 
@@ -16,6 +16,19 @@ public class DefenderSpawner : MonoBehaviour
     {
         defender = defenderToselect;
         Debug.Log("Character Selected: " + defenderToselect.name);
+    }
+
+    private void testDefenderPlacement(Vector2 gridPos)
+    {
+        var magicDisplay = FindObjectOfType<MagicPowerDisplay>();
+        int defenderCost = defender.getmagicCost();
+
+        if (magicDisplay.enoughmagic(defenderCost))
+        {
+            SpawnDefender(gridPos);
+            magicDisplay.spendMagic(defenderCost);
+        }
+
     }
 
     private Vector2 GetSquaredClicked()
