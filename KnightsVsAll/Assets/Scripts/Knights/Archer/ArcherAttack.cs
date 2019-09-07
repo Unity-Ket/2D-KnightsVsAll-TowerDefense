@@ -8,22 +8,25 @@ public class ArcherAttack : MonoBehaviour
     [SerializeField] GameObject weapon;
     Golem1Spawner myLaneSpawner;
 
+    Animator anim;
+
     private void Start()
     {
         setLaneSpawner();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
         if (enemyisthere())
         {
-            Debug.Log("Shooting the Enemy ");
-            //TODO change aniamtion state to shoot
+            //Debug.Log("Shooting the Enemy ");
+            anim.SetBool("isAttacking", true);
         }
         else
         {
-            Debug.Log("Waiting for Enemy");
-            //TODO change animation state to Idle
+            //Debug.Log("Waiting for Enemy");
+            anim.SetBool("isAttacking", false);
         }
     }
 

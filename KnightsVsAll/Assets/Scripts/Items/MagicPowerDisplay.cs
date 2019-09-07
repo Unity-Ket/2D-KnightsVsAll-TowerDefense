@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MagicPowerDisplay : MonoBehaviour
 {
     [SerializeField] int magicPower = 200;
+    //int OTmagicAdd = 5;
     Text magicPowerText;
 
     private void Start()
@@ -18,6 +19,18 @@ public class MagicPowerDisplay : MonoBehaviour
     {
         magicPowerText.text = magicPower.ToString();
     }
+
+    //private void ifZeromagic()
+    //{
+    //    //TODO add magic OT if below 100
+    //    if (magicPower <= 0 && magicPower <= 100)
+    //    {
+    //        magicPower += OTmagicAdd * Time.deltaTime;
+    //        displayUpdate();
+    //    }
+
+    //}
+
 
     public bool enoughmagic(int amount)
     {
