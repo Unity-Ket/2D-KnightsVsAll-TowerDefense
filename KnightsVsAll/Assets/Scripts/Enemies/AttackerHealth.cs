@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Golem1Health : MonoBehaviour
+public class AttackerHealth : MonoBehaviour
 {
-    [Range (100,300)][SerializeField] float health;
+    [SerializeField] float health;
     Animator Anim;
-    Rigidbody2D Golem1;
+    Rigidbody2D Attacker;
 
     private void Start()
     {
         Anim = GetComponent<Animator>();
-        Golem1 = GetComponent<Rigidbody2D>();
+        Attacker = GetComponent<Rigidbody2D>();
     }
 
     public void DealDamage(float damage)

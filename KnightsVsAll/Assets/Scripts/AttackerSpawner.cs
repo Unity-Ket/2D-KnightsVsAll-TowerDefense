@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Golem1Spawner : MonoBehaviour
+public class AttackerSpawner : MonoBehaviour
 {
-    [Range(5f,10f)][SerializeField] float minSpawnDelay;
-    [Range(10f,20f)][SerializeField] float maxSpawnDelay;
-    [SerializeField] Golem1 enemyType;
+    [Range(5f, 10f)] [SerializeField] float minSpawnDelay;
+    [Range(10f, 20f)] [SerializeField] float maxSpawnDelay;
+    [SerializeField] Attacker enemyType;
 
     bool spawn = true;
 
@@ -21,14 +21,14 @@ public class Golem1Spawner : MonoBehaviour
 
     private void spawnEnemy()
     {
-        Golem1 newGolem1 = Instantiate(enemyType, transform.position, transform.rotation) as Golem1;
+        Attacker newAttacker = Instantiate(enemyType, transform.position, transform.rotation) as Attacker;
 
-        newGolem1.transform.parent = transform;
+        newAttacker.transform.parent = transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

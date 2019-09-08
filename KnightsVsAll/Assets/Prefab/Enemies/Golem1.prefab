@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 372974583068045924}
   - component: {fileID: 5743973856465090030}
   - component: {fileID: 1391962428882776867}
+  - component: {fileID: 1094269946}
   m_Layer: 0
   m_Name: Golem1
   m_TagString: Untagged
@@ -78,10 +79,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0737018, y: -0.44220543}
+  m_Offset: {x: -0.016750336, y: -0.31556916}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -92,7 +93,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.18582, y: 4.872751}
+  m_Size: {x: 1.8832684, y: 3.1721997}
   m_EdgeRadius: 0
 --- !u!50 &5743973856465090030
 Rigidbody2D:
@@ -128,6 +129,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 150
+--- !u!114 &1094269946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673295692789296217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10614be450feb4884bef74703b4f4533, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4668664184365066450
 GameObject:
   m_ObjectHideFlags: 0

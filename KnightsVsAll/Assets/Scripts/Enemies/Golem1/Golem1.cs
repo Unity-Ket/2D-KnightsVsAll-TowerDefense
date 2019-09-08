@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class Golem1 : MonoBehaviour
 {
-    [Range(0f, 10f)] [SerializeField] float walkSpeed;
-
-    // Start is called before the first frame update
-    void Start()
+    public void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        
+        GameObject otherObject = otherCollider.gameObject;
+
+        if (otherObject.GetComponent<Defender>())
+        {
+            GetComponent<Attacker>().Attack(otherObject);
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Translate(Vector2.left * walkSpeed * Time.deltaTime);
-    }
-}
+
+}//Golem1

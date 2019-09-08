@@ -6,7 +6,7 @@ public class ArcherAttack : MonoBehaviour
 {
     [SerializeField] GameObject Projectile;
     [SerializeField] GameObject weapon;
-    Golem1Spawner myLaneSpawner;
+    AttackerSpawner myLaneSpawner;
 
     Animator anim;
 
@@ -32,9 +32,9 @@ public class ArcherAttack : MonoBehaviour
 
     private void setLaneSpawner()
     {
-        Golem1Spawner[] attackerSpawners = FindObjectsOfType<Golem1Spawner>();
+        AttackerSpawner[] attackerSpawners = FindObjectsOfType<AttackerSpawner>();
 
-        foreach (Golem1Spawner spawner in attackerSpawners)
+        foreach (AttackerSpawner spawner in attackerSpawners)
         {
             bool closeEnough = (Mathf.Abs (spawner.transform.position.y - transform.position.y) <= Mathf.Epsilon);
 
