@@ -69,6 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 1
+  PlayerdmgAmount: 10
 --- !u!61 &372974583068045924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64bc35e5b7b4422685e38e53eff1518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 150
+  health: 250
 --- !u!114 &1094269946
 MonoBehaviour:
   m_ObjectHideFlags: 0

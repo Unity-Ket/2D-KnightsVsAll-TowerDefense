@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
-    [Range (0f, 10f)][SerializeField] float walkSpeed;
+    [Range (0f, 10f)][SerializeField] float walkSpeed =1f;
     GameObject currentTarget;
 
     // Start is called before the first frame update
