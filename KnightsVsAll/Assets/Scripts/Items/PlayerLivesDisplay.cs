@@ -27,7 +27,7 @@ public class PlayerLivesDisplay : MonoBehaviour
 
         if (playerLives <= 0)
         {
-            FindObjectOfType<LevelLoad>().loadLoseScreen();
+            FindObjectOfType<LevelController>().gameFailedCondition();
         }
     }
 

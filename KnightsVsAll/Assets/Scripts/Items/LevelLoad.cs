@@ -24,14 +24,35 @@ public class LevelLoad : MonoBehaviour
         LoadNextScene();
     }
 
+    public void loadMainmenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Start Screen");
+    }
+
+    public void restartLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
     public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-    // Update is called once per frame
     public void loadLoseScreen()
     {
         SceneManager.LoadScene("Lose Screen");
+    }
+
+    public void loadOptionScreen()
+    {
+        SceneManager.LoadScene("Option Screen");
+    }
+
+    public void quitApp()
+    {
+        Application.Quit();
     }
 }

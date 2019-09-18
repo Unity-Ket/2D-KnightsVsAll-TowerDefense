@@ -7,6 +7,20 @@ public class Attacker : MonoBehaviour
     [Range (0f, 10f)][SerializeField] float walkSpeed =1f;
     GameObject currentTarget;
 
+    private void Awake()
+    {
+        FindObjectOfType<LevelController>().enemyiesSpawned();
+    }
+
+    private void OnDestroy()
+    {
+        LevelController levelController = FindObjectOfType<LevelController>();
+        if (levelController != null)
+        {
+            FindObjectOfType<LevelController>().enemiesKilled();
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
