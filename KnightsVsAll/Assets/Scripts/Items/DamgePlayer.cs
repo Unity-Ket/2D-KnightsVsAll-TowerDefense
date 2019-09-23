@@ -12,11 +12,13 @@ public class DamgePlayer : MonoBehaviour
         {
             int damage = 10;
             FindObjectOfType<PlayerLivesDisplay>().takeLives(damage);
+            Destroy(otherCollider.gameObject);
         }
         else if (otherObject.GetComponent<Fox>())
         {
             int damage = 5;
             FindObjectOfType<PlayerLivesDisplay>().takeLives(damage);
+            Destroy(otherCollider.gameObject);
         }
     }
 }//dmgPlayer

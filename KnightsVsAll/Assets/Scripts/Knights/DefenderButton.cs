@@ -1,10 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DefenderButton : MonoBehaviour
 {
     [SerializeField] Defender KnightsPrefab;
+
+
+    private void Start()
+    {
+        buttonCost();
+    }
 
     private void OnMouseDown()
     {
@@ -20,4 +28,17 @@ public class DefenderButton : MonoBehaviour
         FindObjectOfType<DefenderSpawner>().SelectedDefender(KnightsPrefab);
         //Debug.Log("Character Selected: " + KnightsPrefab.name);
     }
-}
+
+    private void buttonCost()
+    {
+        Text costText = GetComponentInChildren<Text>();
+        if (!costText)
+        {
+            Debug.LogError(name + " Has no cost!");
+        }
+        else{
+            costText.text = KnightsPrefab.getmagicCost().ToString();
+        }
+    }
+
+}//button

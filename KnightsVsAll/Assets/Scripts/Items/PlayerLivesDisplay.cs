@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class PlayerLivesDisplay : MonoBehaviour
 {
     [SerializeField]
-    float playerLives = 200, midLvlLives =100, hardLvlLives = 50;
-    Text playerLivesText, midLvlLivesText, hardLvlLivesText;
+    float playerLives = 1;
+    Text playerLivesText;
 
     private void Start()
     {
@@ -21,8 +21,6 @@ public class PlayerLivesDisplay : MonoBehaviour
     private void displayUpdate()
     {
         playerLivesText.text = playerLives.ToString();
-        midLvlLivesText.text = midLvlLives.ToString();
-        hardLvlLivesText.text = hardLvlLives.ToString();
     }
 
     public void takeLives(int PlayerdmgAmount)
@@ -38,24 +36,14 @@ public class PlayerLivesDisplay : MonoBehaviour
 
     public void lvlModification()
     {
-        if (PlayerPrefsController.GetDifficulty() > 0 && PlayerPrefsController.GetDifficulty() <= 1)
+        if (PlayerPrefsController.GetDifficulty() <= 1)
         {
-            playerLives = midLvlLives;
-            //midLvlLivesText.text = midLvlLives.ToString();
-            if (midLvlLives <= 0)
-            {
-                FindObjectOfType<LevelController>().gameFailedCondition();
-            }
+            playerLives = 100;
             Debug.Log("DIFFICULTY LEVEL: " + PlayerPrefsController.GetDifficulty() + " PLAYER LIVES: " + playerLives);
         }
-        else if (PlayerPrefsController.GetDifficulty() > 1 && PlayerPrefsController.GetDifficulty() <= 2)
+        else if (PlayerPrefsController.GetDifficulty() >= 2)
         {
-            playerLives = hardLvlLives;
-            //hardLvlLivesText.text = hardLvlLives.ToString();
-            if (hardLvlLives <= 0)
-            {
-                FindObjectOfType<LevelController>().gameFailedCondition();
-            }
+            playerLives = 50;
             Debug.Log("DIFFICULTY LEVEL: " + PlayerPrefsController.GetDifficulty() + " PLAYER LIVES: " + playerLives);
         }
     }
