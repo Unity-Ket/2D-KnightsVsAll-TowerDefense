@@ -20,7 +20,6 @@ public class defenderHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            Anim.SetTrigger("Dead");
             Destroy(gameObject, 3f);
         }
     }

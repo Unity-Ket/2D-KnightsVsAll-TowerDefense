@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour
 {
-    [SerializeField] int magicCost = 100;
+    [SerializeField] int magicCost = 10;
 
 
     public void addMagicOT(int amount)
