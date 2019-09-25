@@ -19,6 +19,15 @@ public class DamgePlayer : MonoBehaviour
             int damage = 5;
             FindObjectOfType<PlayerLivesDisplay>().takeLives(damage);
             Destroy(otherCollider.gameObject);
+        } else if (otherObject.GetComponent<Troll01>())
+        {
+            int damage = 50;
+            FindObjectOfType<PlayerLivesDisplay>().takeLives(damage);
+            Destroy(otherCollider.gameObject);
+        }else if (otherObject.GetComponent<MagicEater>())
+        {
+            //use if Enemy doesn't hurt player
+            Destroy(otherCollider.gameObject);
         }
     }
 }//dmgPlayer

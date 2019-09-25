@@ -51,8 +51,23 @@ public class LevelLoad : MonoBehaviour
         SceneManager.LoadScene("Option Screen");
     }
 
+    public void loadCreditScreen()
+    {
+        SceneManager.LoadScene("Credit Screen");
+    }
+
     public void quitApp()
     {
         Application.Quit();
+    }
+
+    public void GlitchButton()
+    {
+        Application.OpenURL("https://www.glitchthegame.com");
+    }
+
+    public void CraftButton()
+    {
+        Application.OpenURL("https://craftpix.net");
     }
 }

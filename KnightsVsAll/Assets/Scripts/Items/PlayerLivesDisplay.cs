@@ -36,7 +36,12 @@ public class PlayerLivesDisplay : MonoBehaviour
 
     public void lvlModification()
     {
-        if (PlayerPrefsController.GetDifficulty() <= 1)
+        if (PlayerPrefsController.GetDifficulty() <= 0)
+        {
+            Debug.Log("DIFFICULTY LEVEL: " + PlayerPrefsController.GetDifficulty() + " PLAYER LIVES: " + playerLives);
+        }
+
+        if (PlayerPrefsController.GetDifficulty() >= 0.2 && PlayerPrefsController.GetDifficulty() <= 1)
         {
             playerLives = 100;
             Debug.Log("DIFFICULTY LEVEL: " + PlayerPrefsController.GetDifficulty() + " PLAYER LIVES: " + playerLives);

@@ -20,8 +20,12 @@ public class defenderHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject, 3f);
+            Debug.Log("Archer is dead");
+            //TODO death animation
+            Anim.SetTrigger("Dead");
+            Destroy(gameObject, .7f);
         }
+        
     }
 
 }//Golem1Health
