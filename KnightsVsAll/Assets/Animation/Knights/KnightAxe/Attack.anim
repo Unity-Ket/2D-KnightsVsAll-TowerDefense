@@ -95,6 +95,6 @@ AnimationClip:
     functionName: strikeCurrentInvader
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 250
+    floatParameter: 350
     intParameter: 0
     messageOptions: 0

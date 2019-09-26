@@ -56,18 +56,33 @@ public class LevelLoad : MonoBehaviour
         SceneManager.LoadScene("Credit Screen");
     }
 
+    public void loadKnightScreen()
+    {
+        SceneManager.LoadScene("Knights Screen");
+    }
+
+    public void loadInvaderScreen()
+    {
+        SceneManager.LoadScene("Invaders Screen");
+    }
+
+    public void loadHelpScreen()
+    {
+        SceneManager.LoadScene("Help Screen");
+    }
+
     public void quitApp()
     {
         Application.Quit();
     }
 
-    public void GlitchButton()
-    {
-        Application.OpenURL("https://www.glitchthegame.com");
-    }
+    //public void GlitchButton()
+    //{
+    //    Application.OpenURL("https://www.glitchthegame.com");
+    //}
 
-    public void CraftButton()
-    {
-        Application.OpenURL("https://craftpix.net");
-    }
+    //public void CraftButton()
+    //{
+    //    Application.OpenURL("https://craftpix.net");
+    //}
 }
