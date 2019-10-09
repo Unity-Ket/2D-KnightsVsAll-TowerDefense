@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class MagicPowerDisplay : MonoBehaviour
 {
     [SerializeField] int magicPower = 200;
-    //int OTmagicAdd = 5;
+    [SerializeField] int magicTimeDelay = 3;
+    int OTmagicAdd = 25;
     Text magicPowerText;
+    bool canAdd = true;
 
     private void Start()
     {
@@ -15,22 +17,38 @@ public class MagicPowerDisplay : MonoBehaviour
         displayUpdate();
     }
 
+    private void Update()
+    {
+        ifZeroMagic();
+    }
+
     private void displayUpdate()
     {
         magicPowerText.text = magicPower.ToString();
     }
 
-    //private void ifZeromagic()
-    //{
-    //    //TODO add magic OT if below 100
-    //    if (magicPower <= 0 && magicPower <= 100)
-    //    {
-    //        magicPower += OTmagicAdd * Time.deltaTime;
-    //        displayUpdate();
-    //    }
+    public void ifZeroMagic()
+    {
 
-    //}
+        if (magicPower > 0 && magicPower <= 150)
+        {
+            if (canAdd)
+            {
+                StartCoroutine(addMagicDelay());
+            }
+        }
+    }
 
+    IEnumerator addMagicDelay()
+    {
+        canAdd = false;
+        //yield return new WaitForSeconds(magicTimeDelay);
+        Debug.Log("canAdd SHOULD be active");
+        yield return new WaitForSeconds(magicTimeDelay);
+        magicPower += OTmagicAdd;
+        displayUpdate();
+        canAdd = true;
+    }
 
     public bool enoughmagic(int amount)
     {

@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07b40c3f47e3449a3aa26300b3cc29d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpawnDelay: 10
-  maxSpawnDelay: 20
+  minSpawnDelay: 20
+  maxSpawnDelay: 50
   ghostsPrefabs:
   - {fileID: 1080203165, guid: d023ab4aa25124a628b60081186f2b6c, type: 3}

@@ -12,6 +12,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Screen.unity
     guid: 4ba5738a7a76849bfbd01d0f10d06d52
   - enabled: 1
+    path: Assets/Scenes/Help Screen.unity
+    guid: b62c622a4f8f148db900c6a8c0b9826e
+  - enabled: 1
+    path: Assets/Scenes/Help Screen 1.unity
+    guid: edc7cf23787a74f85ae3ae40d086746f
+  - enabled: 1
+    path: Assets/Scenes/Invaders Screen.unity
+    guid: e99dd70ba1e2c490c9da54ada9cb1075
+  - enabled: 1
+    path: Assets/Scenes/Invaders Screen 1.unity
+    guid: 98c6bc90b305d4697ace99d473249b2b
+  - enabled: 1
+    path: Assets/Scenes/Knights Screen.unity
+    guid: b1aeb4085320d4ff18d468dbc751e3ea
+  - enabled: 1
+    path: Assets/Scenes/Knights Screen 1.unity
+    guid: 86d620ece828648bb9425e7593f82c09
+  - enabled: 1
     path: Assets/Scenes/Level01.unity
     guid: 9802d8f024b794d9197e9780167f625d
   - enabled: 1
@@ -38,19 +56,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credit Screen.unity
     guid: f4dcc06c00eed450aa0a350912549304
-  - enabled: 1
-    path: Assets/Scenes/Help Screen.unity
-    guid: b62c622a4f8f148db900c6a8c0b9826e
-  - enabled: 1
-    path: Assets/Scenes/Invaders Screen.unity
-    guid: e99dd70ba1e2c490c9da54ada9cb1075
-  - enabled: 1
-    path: Assets/Scenes/Invaders Screen 1.unity
-    guid: 98c6bc90b305d4697ace99d473249b2b
-  - enabled: 1
-    path: Assets/Scenes/Knights Screen.unity
-    guid: b1aeb4085320d4ff18d468dbc751e3ea
-  - enabled: 1
-    path: Assets/Scenes/Knights Screen 1.unity
-    guid: 86d620ece828648bb9425e7593f82c09
   m_configObjects: {}

@@ -71,6 +71,11 @@ public class LevelLoad : MonoBehaviour
         SceneManager.LoadScene("Help Screen");
     }
 
+    public void loadlvl1()
+    {
+        SceneManager.LoadScene("Level01"); 
+    }
+
     public void quitApp()
     {
         Application.Quit();
